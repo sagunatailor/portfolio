@@ -1,0 +1,531 @@
+/* BREAKPOINTS */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+#more {
+  display: none;
+}
+
+@media only screen and (min-width: 0) {
+  html {
+    min-height: 100%;
+    overflow: visible;
+    scroll-behavior: smooth;
+  }
+  html body {
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  html body main {
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: #141c3a;
+  }
+  html body main a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  html body main p {
+    line-height: 1.8rem;
+    font-size: 1em;
+    font-weight: 300;
+  }
+  html body main h2 {
+    padding: 0 0 10px 0;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+  }
+  html body main h3 {
+    font-weight: 900;
+    margin: 0;
+  }
+  html body main > svg {
+    height: 4rem;
+    z-index: -1;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    fill: #db309a;
+  }
+  html body main > img {
+    max-width: 250px;
+    margin: 50px 0 0 0;
+  }
+  html body main section {
+    padding: 5px 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  html body main section > div {
+    padding: 0px 20px;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+  }
+  html body main section .pink {
+    color: #db309a;
+  }
+  html body main section .green {
+    color: #5be9b9;
+  }
+  html body main section.about {
+    border-top: 5px solid #141c3a;
+    border-bottom: 5px solid #141c3a;
+    padding-bottom: 0;
+  }
+  html body main section.about figure {
+    display: none;
+  }
+  html body main section.about p {
+    font-size: 1.2em;
+    line-height: 2.2rem;
+    padding: 5px 0;
+    color: #141c3a;
+    font-weight: 400;
+  }
+  html body main section.about > div {
+    flex-direction: column;
+  }
+  html body main section.about > div > div {
+    margin: 0 1rem 0 0;
+    flex: 1;
+  }
+  html body main section.skills {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+  }
+  html body main section.brands .carousel {
+    display: none;
+  }
+  html body main section.brands > div {
+    flex-direction: column;
+  }
+  html body main section.brands > div p {
+    margin: 0;
+    padding: 10px 0;
+  }
+  html body main section.brands > div ul li {
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  html body main section.brands > div .tab {
+    overflow: hidden;
+    border-right: 1px solid #e6ecf8;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    background-color: white;
+  }
+  html body main section.brands > div .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  html body main section.brands > div .tab button:hover {
+    background-color: white;
+  }
+  html body main section.brands > div .tab button.active {
+    background-color: #5be9b9;
+  }
+  html body main section.brands > div .tabcontent {
+    border-top: none;
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+    flex-direction: column;
+    margin-bottom: 50px;
+    display: none;
+    padding: 15px 30px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+  }
+  html body main section.brands > div .tabcontent > div {
+    display: flex;
+  }
+  html body main section.brands > div .tabcontent > div figure {
+    display: block;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    padding: 0;
+    margin: 0 10px 10px 10px;
+  }
+  html body main section.brands > div .tabcontent > div figure img {
+    max-width: 200px;
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+  }
+  html body main section.brands > div .tabcontent .topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+  }
+  @-webkit-keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  html body main section.brands > div .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  html body main section.brands > div .modal .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  html body main section.brands > div .modal .modal-content img {
+    width: 100%;
+    margin: 50px auto;
+  }
+  html body main section.brands > div .modal .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  html body main section.brands > div .modal .modal-close:hover, html body main section.brands > div .modal .modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  html body main section.testimonials {
+    background-color: #141c3a;
+    color: white;
+  }
+  html body main section.testimonials > div {
+    background-color: #141c3a;
+    flex-direction: column;
+  }
+  html body main section.testimonials > div button {
+    background-color: #db309a;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 0 0 20px;
+  }
+  html body main section.testimonials > div span {
+    margin: 12px 0px;
+  }
+  html body main section.testimonials > div span:after {
+    color: #db309a;
+    content: close-quote;
+    font-size: 3em;
+    font-family: auto;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+  }
+  html body main section.testimonials > div span:before {
+    color: #db309a;
+    content: open-quote;
+    font-size: 3em;
+    font-family: auto;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  html body main section.testimonials > div p i {
+    display: block;
+    padding: 5px 0 0 0px;
+  }
+  html body main section.contact {
+    margin: 0;
+  }
+  html body main section.contact > div {
+    flex-direction: column;
+  }
+  html body main section.contact > div figure {
+    display: none;
+  }
+  html body main section.contact > div > div {
+    margin: 0 1rem 0 0;
+    flex: 1;
+    max-width: 580px;
+  }
+  html body main section .column-container {
+    margin: 0 auto 10px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  html body main section .column-container .column {
+    border-bottom: 0px solid #e6ecf8;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 10px 30px 20px;
+    background-color: white;
+  }
+  html body main section .column-container .column:last-child {
+    border-right: 0;
+  }
+  html body main section .column-container .column h3 {
+    text-align: center;
+    color: #141c3a;
+    font-weight: 600;
+  }
+  html body main section .column-container .column figure {
+    border: 2px solid #5be9b9;
+    background-color: #5be9b9;
+    position: relative;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html body main section .column-container .column figure img {
+    height: 40px;
+  }
+  html body main section .column-container .column p {
+    text-align: center;
+  }
+  html body main section .column-container .column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  html body main section .column-container .column ul li {
+    padding: 4px 0;
+    text-align: center;
+  }
+  html body nav {
+    background-color: #141c3a;
+    border-bottom: 1px solid #e6ecf8;
+  }
+  html body nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  html body nav ul li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  html body nav ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 20px;
+    color: #e6ecf8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  html body nav ul li a:hover {
+    background-color: #5be9b9;
+    color: #141c3a;
+  }
+  html body header {
+    background-color: #db309a;
+    padding: 5px 0 0 0;
+  }
+  html body header h1 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+  }
+  html body footer {
+    background-color: #141c3a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+  }
+  html body footer p,
+  html body footer a {
+    font-size: 0.7rem;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  html body header {
+    padding: 20px 0 0 0;
+  }
+  html body header h1 {
+    font-size: 3em;
+  }
+  html body nav ul {
+    flex-direction: row;
+  }
+  html body nav ul li {
+    flex: 1;
+  }
+  html body nav ul li a {
+    padding: 10px 20px;
+  }
+  html body main {
+    padding: 150px 0 0 0;
+  }
+  html body main > svg {
+    height: 10rem;
+  }
+  html body main h2 {
+    padding: 20px 0 20px;
+    font-size: 2.5em;
+  }
+  html body main > img {
+    max-width: 500px;
+  }
+  html body main section {
+    padding: 24px 0;
+  }
+  html body main section > div {
+    padding: 30px 20px;
+  }
+  html body main section .column-container {
+    margin: 0 auto 50px;
+  }
+  html body main section.testimonials > div button {
+    margin: 0;
+  }
+  html body main section.about > div > div {
+    max-width: 580px;
+  }
+  html body main section.brands {
+    /* Styles for the modal */
+  }
+  html body main section.brands p {
+    max-width: 80%;
+  }
+  html body main section.brands .carousel {
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+    flex-direction: row;
+    padding: 65px 0px;
+    border-radius: 4px;
+    position: relative;
+    max-width: 1000px;
+    padding: 30px 20px;
+  }
+  html body main section.brands .carousel > div {
+    animation: scroll 30s linear infinite;
+    display: flex;
+    flex-direction: row;
+  }
+  html body main section.brands .carousel > div > div {
+    width: 150px;
+    margin-right: 60px;
+    flex-shrink: 0;
+    display: flex;
+  }
+  html body main section.brands .carousel > div > div img {
+    object-fit: contain;
+    width: 100%;
+  }
+  html body main section.contact > div {
+    flex-direction: row;
+  }
+  html body main section.contact > div figure {
+    margin: 0;
+    display: block;
+  }
+  html body main section.contact > div figure img {
+    width: 100%;
+    height: auto;
+    max-width: 160px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  html body main section.about figure {
+    display: block;
+    position: relative;
+    bottom: -406px;
+  }
+  html body main section.about figure img {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+  html body main section.about > div,
+  html body main section .column-container {
+    flex-direction: row;
+  }
+  html body main section .column-container {
+    border-radius: 6px;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+  }
+  html body main section .column-container .column {
+    border-right: 1px solid #e6ecf8;
+  }
+  html body main section.skills {
+    background-color: #141c3a;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

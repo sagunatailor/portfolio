@@ -18,13 +18,16 @@ document.getElementById('defaultOpen').click();
 function myReadMoreFunction() {
   var moreText = document.getElementById('more');
   var btnText = document.getElementById('myBtn');
+  var blur = document.getElementById('blur');
 
   if (moreText.style.display === 'none') {
     btnText.innerHTML = 'Read less';
     moreText.style.display = 'inline';
+    blur.style.display = 'none';
   } else {
     btnText.innerHTML = 'Read more';
     moreText.style.display = 'none';
+    blur.style.display = 'block';
   }
 }
 

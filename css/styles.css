@@ -241,15 +241,33 @@
     text-decoration: none;
     cursor: pointer;
   }
-  html body main section.testimonials {
+  html body main section.recommendations {
     background-color: #141c3a;
     color: white;
   }
-  html body main section.testimonials > div {
+  html body main section.recommendations > div {
     background-color: #141c3a;
     flex-direction: column;
+    position: relative;
   }
-  html body main section.testimonials > div button {
+  html body main section.recommendations > div #blur {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: url(#blur);
+    position: absolute;
+    height: 100px;
+    display: block;
+    width: 100%;
+    bottom: 74px;
+    z-index: 2;
+    transition: all 50ms all;
+    left: 0;
+    background-image: linear-gradient(transparent 0, rgba(20, 28, 58, 0.91) 52px, rgba(20, 28, 58, 0.768627451) 142px);
+  }
+  html body main section.recommendations > div button {
     background-color: #db309a;
     color: white;
     outline: none;
@@ -258,10 +276,10 @@
     font-size: 16px;
     margin: 0 0 20px;
   }
-  html body main section.testimonials > div span {
+  html body main section.recommendations > div span {
     margin: 12px 0px;
   }
-  html body main section.testimonials > div span:after {
+  html body main section.recommendations > div span:after {
     color: #db309a;
     content: close-quote;
     font-size: 3em;
@@ -270,7 +288,7 @@
     margin-left: 0.25em;
     vertical-align: -0.4em;
   }
-  html body main section.testimonials > div span:before {
+  html body main section.recommendations > div span:before {
     color: #db309a;
     content: open-quote;
     font-size: 3em;
@@ -279,7 +297,7 @@
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
-  html body main section.testimonials > div p i {
+  html body main section.recommendations > div p i {
     display: block;
     padding: 5px 0 0 0px;
     font-weight: 700;
@@ -444,9 +462,9 @@
     padding: 30px 20px;
   }
   html body main section .column-container {
-    margin: 0 auto 50px;
+    margin: 30px auto 50px;
   }
-  html body main section.testimonials > div button {
+  html body main section.recommendations > div button {
     margin: 0;
     cursor: pointer;
   }

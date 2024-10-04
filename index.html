@@ -18,20 +18,26 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>Saguna Tailor - Portfolio</title>
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div id="myLinks">
+          <a id="#aboutNav" href="#about">About</a>
+          <a id="#testimonialsNav" href="#testimonials">Testimonials</a>
+          <a id="#brandsNav" href="#brands">Brands</a>
+          <a id="#skillsNav" href="#skills">Skills</a>
+          <a id="#contactNav" href="#contact">Contact</a>
+        </div>
     </nav>
     <header>
       <h1>Front End Developer<br />Saguna Tailor</h1>
@@ -254,7 +260,7 @@
               >
             </p>
           </div>
-          <button onclick="myFunction()" id="myBtn">Read more</button>
+          <button onclick="myReadMoreFunction()" id="myBtn">Read more</button>
         </div>
       </section>
 
@@ -319,11 +325,7 @@
           </div>
 
           <div id="Bmj" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            ><img src="images/logos/bmj-logo.png" alt="the bmj" height="60" />
+           <img src="images/logos/bmj-logo.png" alt="the bmj" height="60" />
             <p>
               <b>Brand:</b>
               <a
@@ -434,11 +436,7 @@
           </div>
 
           <div id="Bwin" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
+            
             <img
               src="images/logos/bwin-logo.png"
               alt="Bwin party gaming"
@@ -516,11 +514,7 @@
           </div>
 
           <div id="Concep" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
+           
             <img
               src="images/logos/concep-logo.png"
               height="60"
@@ -561,13 +555,7 @@
           </div>
 
           <div id="Bmt" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
-
-            <img src="images/logos/bmt-logo.png" height="60" alt="BMT" />
+                      <img src="images/logos/bmt-logo.png" height="60" alt="BMT" />
             <p>
               <b>Brand:</b>
               <a href="https://www.bmt.org/" title="bmt" target="_blank"
@@ -611,11 +599,7 @@
           </div>
 
           <div id="Orange" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
+
             <img
               src="images/logos/orange-logo.png"
               alt="orange"
@@ -663,11 +647,7 @@
           </div>
 
           <div id="TheGroup" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
+
             <img
               src="images/logos/the-group-logo.jpg"
               alt="The group"
@@ -735,11 +715,7 @@
           </div>
 
           <div id="Capita" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
+
             <img src="images/logos/capita-logo.png" alt="capita" height="60" />
             <p>
               <b>Brand:</b>
@@ -790,11 +766,7 @@
           </div>
 
           <div id="Harvey" class="tabcontent">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="topright"
-              >&times</span
-            >
+
             <img
               src="images/logos/harvey-logo.jpg"
               alt="harvey nichols"

@@ -36,7 +36,7 @@ $background-grey: #f9f9f9;
     overflow: visible;
     scroll-behavior: smooth;
     body {
-      color: rgb(0, 0, 0);
+      color: $dark-blue;
       font-family: 'Poppins', sans-serif;
       background-color: $background-grey;
       font-weight: 300;
@@ -61,9 +61,9 @@ $background-grey: #f9f9f9;
           font-weight: 300;
         }
         h2 {
-          padding: 0 0 10px 0;
+          padding: 0 0 20px 0;
           font-weight: 800;
-          margin: 0;
+          margin: 19px 0 0 0;
           text-align: center;
         }
         h3 {
@@ -203,11 +203,6 @@ $background-grey: #f9f9f9;
                     }
                   }
                 }
-                .topright {
-                  float: right;
-                  cursor: pointer;
-                  font-size: 28px;
-                }
               }
               @-webkit-keyframes fadeEffect {
                 from {
@@ -303,6 +298,7 @@ $background-grey: #f9f9f9;
                 i {
                   display: block;
                   padding: 5px 0 0 0px;
+                  font-weight: 700;
                 }
               }
             }
@@ -378,33 +374,28 @@ $background-grey: #f9f9f9;
         }
       }
       nav {
+        overflow: hidden;
         background-color: $dark-blue;
-        border-bottom: 1px solid $grey-border;
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          li {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            a {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              padding: 5px 20px;
-              color: $grey-border;
-              text-decoration: none;
-              font-size: 12px;
-              font-weight: 500;
-              &:hover {
-                background-color: $green;
-                color: $dark-blue;
-              }
-            }
+        color: white;
+        display: flex;
+        flex-direction: column;
+        #myLinks {
+          display: none;
+        }
+        a {
+          color: white;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+          display: block;
+          &.icon {
+            background: $dark-blue;
+            color: white;
+            display: block;            
+          }
+          &:hover {
+            background-color: $pink;
+            color: white;
           }
         }
       }
@@ -447,13 +438,13 @@ $background-grey: #f9f9f9;
       }
     }
     nav {
-      ul {
+      flex-direction: row;
+       a.icon {display: none;}
+      #myLinks {
+        display: flex;
         flex-direction: row;
-        li {
-          flex: 1;
-          a {
-            padding: 10px 20px;
-          }
+        a {    
+          padding: 10px 20px;
         }
       }
     }
@@ -481,6 +472,7 @@ $background-grey: #f9f9f9;
           > div {
             button {
               margin: 0;
+              cursor: pointer;
             }
           }
         }

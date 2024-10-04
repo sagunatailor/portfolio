@@ -22,7 +22,7 @@
     scroll-behavior: smooth;
   }
   html body {
-    color: rgb(0, 0, 0);
+    color: #141c3a;
     font-family: "Poppins", sans-serif;
     background-color: #f9f9f9;
     font-weight: 300;
@@ -49,9 +49,9 @@
     font-weight: 300;
   }
   html body main h2 {
-    padding: 0 0 10px 0;
+    padding: 0 0 20px 0;
     font-weight: 800;
-    margin: 0;
+    margin: 19px 0 0 0;
     text-align: center;
   }
   html body main h3 {
@@ -190,11 +190,6 @@
     width: 100%;
     cursor: pointer;
   }
-  html body main section.brands > div .tabcontent .topright {
-    float: right;
-    cursor: pointer;
-    font-size: 28px;
-  }
   @-webkit-keyframes fadeEffect {
     from {
       opacity: 0;
@@ -287,6 +282,7 @@
   html body main section.testimonials > div p i {
     display: block;
     padding: 5px 0 0 0px;
+    font-weight: 700;
   }
   html body main section.contact {
     margin: 0;
@@ -356,35 +352,30 @@
     text-align: center;
   }
   html body nav {
+    overflow: hidden;
     background-color: #141c3a;
-    border-bottom: 1px solid #e6ecf8;
-  }
-  html body nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    color: white;
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
-  html body nav ul li {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  html body nav #myLinks {
+    display: none;
   }
-  html body nav ul li a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5px 20px;
-    color: #e6ecf8;
+  html body nav a {
+    color: white;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 17px;
+    display: block;
   }
-  html body nav ul li a:hover {
-    background-color: #5be9b9;
-    color: #141c3a;
+  html body nav a.icon {
+    background: #141c3a;
+    color: white;
+    display: block;
+  }
+  html body nav a:hover {
+    background-color: #db309a;
+    color: white;
   }
   html body header {
     background-color: #db309a;
@@ -420,13 +411,17 @@
   html body header h1 {
     font-size: 3em;
   }
-  html body nav ul {
+  html body nav {
     flex-direction: row;
   }
-  html body nav ul li {
-    flex: 1;
+  html body nav a.icon {
+    display: none;
   }
-  html body nav ul li a {
+  html body nav #myLinks {
+    display: flex;
+    flex-direction: row;
+  }
+  html body nav #myLinks a {
     padding: 10px 20px;
   }
   html body main {
@@ -453,6 +448,7 @@
   }
   html body main section.testimonials > div button {
     margin: 0;
+    cursor: pointer;
   }
   html body main section.about > div > div {
     max-width: 580px;

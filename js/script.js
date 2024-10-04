@@ -1,4 +1,4 @@
-// TABS //
+// TABBED CONTENT //
 function openBrand(evt, brandName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName('tabcontent');
@@ -15,7 +15,7 @@ function openBrand(evt, brandName) {
 document.getElementById('defaultOpen').click();
 
 //  READ MORE / LESS //
-function myFunction() {
+function myReadMoreFunction() {
   var moreText = document.getElementById('more');
   var btnText = document.getElementById('myBtn');
 
@@ -52,3 +52,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// HAMBURGER MENU //
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

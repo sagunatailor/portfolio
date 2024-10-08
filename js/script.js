@@ -32,6 +32,11 @@ function myReadMoreFunction() {
 }
 
 // MODAL //
+document.body.addEventListener('keyup', function(event) {
+  if (event.key == "Escape") {    
+    document.getElementById('imageModal').style.display = 'none';
+  }
+});
 document.addEventListener('DOMContentLoaded', function () {
   const images = document.querySelectorAll('.tabcontent img');
   const modal = document.getElementById('imageModal');
@@ -44,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       modalImage.src = this.src;
     });
   });
-
+ 
   modalClose.addEventListener('click', function () {
     modal.style.display = 'none';
   });

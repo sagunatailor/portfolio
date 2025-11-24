@@ -518,13 +518,7 @@
 }
 @media only screen and (min-width: 960px) {
   html body main section.about figure {
-    display: block;
-    position: relative;
-    bottom: -406px;
-  }
-  html body main section.about figure img {
-    max-width: 190px;
-    margin: 0 auto;
+    display: flex;
   }
   html body main section.about > div,
   html body main section .column-container {

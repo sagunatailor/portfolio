@@ -21,7 +21,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <title>Saguna Tailor - Portfolio</title>
   </head>
@@ -61,18 +61,14 @@
           <div>
             <p>
               My name is Saguna Tailor, and I bring 20 years of experience in
-              Front-End development, specialising in building responsive and
+              Front-End development, working in start-up's to FTSE 250 Index companies, specialising in building responsive and
               user-centered web applications. Whether working independently or
               as part of a team, I take pride in fostering a collaborative and
               motivated environment. I value the opportunity to share my
               knowledge while continuously learning from others.
             </p>
-            <p>
-              In my spare time, I used to enjoy traveling, gardening and
-              cycling.
-            </p>
           </div>
-          <figure><img src="images/me.png" alt="devices" /></figure>
+          <figure><img src="me.png" alt="devices" /></figure>
         </div>
       </section>
 
@@ -266,6 +262,7 @@
         <div>
           <div class="carousel">
             <div>
+              <div><img src="images/logos/asos.png" /></div>
               <div><img src="images/logos/bmj-logo.png" /></div>
               <div><img src="images/logos/bwin-logo.png" /></div>
               <div><img src="images/logos/concep-logo.png" /></div>
@@ -276,6 +273,7 @@
               <div><img src="images/logos/harvey-logo.jpg" /></div>
             </div>
             <div>
+              <div><img src="images/logos/asos.png" /></div>
               <div><img src="images/logos/bmj-logo.png" /></div>
               <div><img src="images/logos/bwin-logo.png" /></div>
               <div><img src="images/logos/concep-logo.png" /></div>
@@ -292,9 +290,12 @@
           <div class="tab">
             <button
               class="tablinks"
-              onclick="openBrand(event, 'Bmj')"
+              onclick="openBrand(event, 'asos')"
               id="defaultOpen"
             >
+              ASOS
+            </button>
+            <button class="tablinks" onclick="openBrand(event, 'Bmj')">
               BMJ
             </button>
             <button class="tablinks" onclick="openBrand(event, 'Bwin')">
@@ -318,6 +319,41 @@
             <button class="tablinks" onclick="openBrand(event, 'Harvey')">
               Harvey Nichols
             </button>
+          </div>
+
+          <div id="asos" class="tabcontent">
+           <img src="images/logos/asos.png" alt="asos" height="60" />
+            <p>
+              <b>Brand:</b>
+              <a
+                href="https://www.asos.com/"
+                title="asos site"
+                target="_blank"
+              >
+                ASOS</a
+              >
+            </p>
+            <p>
+              <b>Description:</b> ASOS is a British online fashion and cosmetic retailer.
+            </p>
+            <p>
+              I developed reusable components, enhanced customer journeys, and adhered to engineering best practices such as TDD, BDD, SOLID, DRY, and KISS. I worked closely with UX/UI, Analytics, and Architecture teams, supported critical applications through effective monitoring, and contributed to design-led workflows using Figma.
+            </p>
+            <p>I migrated legacy Redux implementations to Redux Toolkit and supported the transition of automated tests from Cypress to Playwright. I also refactored components to support new features and resolve defects—such as improving filter menus and range-based search results—while writing comprehensive Playwright and Jest tests for all delivered code and setting up Optimizely tests for A/B testing. Additionally, I collaborated with QA to maintain robust Playwright end-to-end test coverage. And worked with screen reader technology to ensure the site is AAA standards for accessibility.
+</p>
+            <p>
+              <b>Technologies:</b>
+              React, CSS, HTML, JavaScript, AWS Amplify, Figma, Cypress, Playwright, Jest, CI/CD GitHub Actions, Azure DevOps.
+            </p>
+            <p><b>ASOS pull out menu feature</b></p>
+            <div>
+              <figure>
+                <img src="images/asos1.png" alt="asos website" />
+              </figure>
+              <figure>
+                <img src="images/asos1.png" alt="asos website" />
+              </figure>
+            </div>
           </div>
 
           <div id="Bmj" class="tabcontent">
@@ -834,7 +870,7 @@
               <li>JavaScript</li>
               <li>React JS</li>
               <li>Responsive web design</li>
-              <li>Web accessibility</li>
+              <li>Web accessibility AAA standard</li>
             </ul>
           </div>
           <div class="column">
@@ -849,7 +885,8 @@
             <ul>
               <li>Jest</li>
               <li>Cypress</li>
-              <li>Selenium</li>
+              <li>Playwright</li>
+              <li>Optimizley</li>
               <li>Lighthouse</li>
             </ul>
           </div>
@@ -867,6 +904,7 @@
               <li>AWS Amplify</li>
               <li>Jenkins</li>
               <li>CI/CD</li>
+              <li>New Relic monitoring</li>
             </ul>
           </div>
           <div class="column">
@@ -988,6 +1026,6 @@
       </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

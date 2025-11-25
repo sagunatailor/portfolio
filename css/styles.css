@@ -471,6 +471,9 @@
   html body main section.about > div > div {
     max-width: 580px;
   }
+  section#about div figure img {
+    max-height: 300px;
+  }
   html body main section.brands {
     /* Styles for the modal */
   }
